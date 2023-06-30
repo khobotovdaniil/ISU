@@ -36,6 +36,7 @@ a {
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    position: relative;
 }
 
 .bold {
@@ -78,3 +79,5 @@ a {
 
 @import 'base/headers';
 @import 'base/buttons';
+@import 'blocks/header';
+@import 'blocks/slider';
