@@ -1,0 +1,52 @@
+@media (max-width:991px) {
+    .header {
+        &__buttons {
+            &__group  {
+                max-width: 300px;
+                &_item {
+                    margin: 5px 10px 0 10px;
+                    height: 30px;
+                }
+            }
+        }
+        &__logoblock {
+            height: 162px;
+            width: 230px;
+            top: -90px;
+            &__logo {
+                width: 153px;
+                height: 62px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+    .header {
+        height: 75px;
+        &__buttons {
+            &__group  {
+                max-width: 200px;
+                &_item {
+                    &-pc {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__logoblock {
+            top: -80px;
+        }
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width:575px) {
+  .header {
+        display: none;
+    }
+}

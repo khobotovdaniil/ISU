@@ -33,24 +33,24 @@
             <div class="container">
                 <div class="header__buttons">
                     <div class="header__buttons__group">
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-tablet" href="#">
                             <img src="./icons/mail.svg" alt="E-Mail">
                         </a>
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-tablet" href="#">
                             <img src="./icons/watsapp.svg" alt="Watsapp">
                         </a>
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-pc" href="#">
                             <img src="./icons/telegram.svg" alt="Telegram">
                         </a>
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-pc" href="#">
                             <img src="./icons/tiktok.svg" alt="TikTok">
                         </a>
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-pc" href="#">
                             <img src="./icons/instagram.svg" alt="Instagram">
                         </a>
                     </div>
                     <div class="header__buttons__group">
-                        <a class="header__buttons__group_item" href="#">
+                        <a class="header__buttons__group_item header__buttons__group_item-pc" href="#">
                             <img src="./icons/youtube.svg" alt="YouTube">
                         </a>
                         <button class="button button-small button-pink">Contuct Us</button>
@@ -70,6 +70,12 @@
                     </ul>
                 </nav>
 
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <div class="header__logoblock">
                     <div class="header__logoblock__logo">
                         <img src="./icons/logo-white.svg" alt="Logo">
@@ -79,9 +85,30 @@
         </header>
 
         <section class="slider" id="slider">
-            <div class="container">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img src="./img/slider/Slide-1.jpg" alt="slide-1">
+                        <div class="slider__content">
+                            <h1 class="slider__header">Zoom Academy</h1>
+                            <h1 class="slider__subheader">of Figure Skating</h1>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <img src="./img/slider/Slide-2.jpg" alt="slide-2">
+                    </li>
+                    <li class="glide__slide">
+                        <img src="./img/slider/Slide-3.jpg" alt="slide-3">
+                    </li>
+                  </ul>
 
-            </div>
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                  </div>
+                </div>
+              </div>
         </section>
 
         <section class="photos" id="photos">

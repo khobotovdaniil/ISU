@@ -16,8 +16,6 @@
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.27.9",
     "core-js": "^3.4.2",
-    "webpack": "^4.41.2",
-    "webpack-stream": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -25,7 +23,9 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
   },
   "browserslist": [
     "last 1 version",
@@ -34,6 +34,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@glidejs/glide": "^3.6.0",
     "gulp-htmlmin": "^5.0.1"
   }
 }
