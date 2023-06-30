@@ -1,0 +1,21 @@
+@keyframes logoblockWide {
+    from {
+        border-radius: 50px;
+        width: 230px;
+    }
+    to {
+        width: 100vw;
+        border-radius: 0;
+    }
+}
+
+@keyframes logoblockNormal {
+    from {
+        width: 100vw;
+        border-radius: 0;
+    }
+    to {
+        border-radius: 50px;
+        width: 300px;
+    }
+}

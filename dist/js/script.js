@@ -3987,11 +3987,24 @@ var Glide = /*#__PURE__*/function (_Core) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 
-new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide', {
-  type: 'carousel',
-  startAt: 0,
-  perView: 1
-}).mount();
+window.addEventListener('DOMContentLoaded', () => {
+  //static/dynamic menu
+  const logoBlock = document.getElementById('logoblock');
+  window.onscroll = function () {
+    if (window.pageYOffset > 200) {
+      logoBlock.classList.add('header__logoblock-wide');
+      logoBlock.classList.remove('header__logoblock-normal');
+    } else {
+      logoBlock.classList.add('header__logoblock-normal');
+      logoBlock.classList.remove('header__logoblock-wide');
+    }
+  };
+  new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1
+  }).mount();
+});
 
 /***/ })
 
