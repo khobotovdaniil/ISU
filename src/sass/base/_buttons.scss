@@ -1,0 +1,95 @@
+.button {
+    font-family: 'Sansita', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--main-4);
+    text-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    border-radius: 50px;
+    border: 3px solid var(--main-4);
+    width: 320px;
+    height: 90px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    background-color: rgba(0,0,0,0);
+    transition: 0.6s all;
+    margin-top: 5px;
+    &:hover {
+        text-shadow: 1px 1px 4px var(--main-1);
+        box-shadow: 1px 1px 4px var(--main-1);
+    }
+    &.active {
+        text-shadow: 1px 1px 4px var(--main-1);
+        background-color: var(--main-2);
+    }
+    &-small{
+        width: 200px;
+        height: 50px;
+        font-size: 30px;
+        padding-bottom: 6px;
+    }
+    &-pink {
+        color: var(--main-1);
+        border: 3px solid var(--main-1);
+        &:hover {
+            text-shadow: 0px 0px 1px var(--main-1);
+            box-shadow: 1px 1px 10px var(--main-1);
+        }
+    }
+    &-purple {
+        color: var(--main-3);
+        border: 3px solid var(--main-3);
+        &:hover {
+            text-shadow: 0px 0px 1px var(--main-4);
+            box-shadow: 1px 1px 10px var(--main-4);
+        }
+    }
+    &-form {
+        width: 300px;
+        height: 60px;
+        font-size: 40px;
+        color: var(--pink);
+        border: 3px solid var(--pink);
+        &:hover {
+            background-color: var(--bg-color);
+            color: var(--text);
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+    .button {
+        width: 200px;
+        height: 60px;
+        font-size: 34px;
+        padding-bottom: 6px;
+        &-small {
+            width: 160px;
+            height: 40px;
+            font-size: 24px;
+            line-height: 16px;
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .button {
+        width: 100px;
+        height: 36px;
+        font-size: 18px;
+        padding-bottom: 4px;
+        &-small {
+            width: 120px;
+            height: 30px;
+            font-size: 18px;
+            line-height: 16px;
+        }
+        &-form {
+            width: 120px;
+            height: 30px;
+            font-size: 18px;
+            line-height: 16px;
+        }
+    }
+}

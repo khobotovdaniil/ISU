@@ -1,0 +1,16 @@
+// $main-color: #FFA501;
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --text: #5C5B5B;
+    --main-1: #FF0198;
+    --main-2: #BF00D6;
+    --main-3: #8500EB;
+    --main-4: #3400D6;
+    --pink: #FAE3FD;
+    --bg-color: rgba(229, 214, 253, 0.60);
+    --shadow: 2px 4px 5px rgba(0, 0, 0, 0.20);
+    --dark-gradient: linear-gradient(120deg, var(--main-4), var(--main-2) 85%);
+    --light-gradient: linear-gradient(45deg, var(--main-1) 10%, var(--main-4) 85%); 
+}

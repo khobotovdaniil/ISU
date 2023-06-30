@@ -1,0 +1,104 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Sansita', sans-serif;
+    font-weight: 700;
+    text-shadow: var(--shadow);
+    z-index: 1;
+}
+
+h1 {
+    font-size: 70px;
+    color: var(--white);
+}
+
+h2 {
+    position: relative;
+    color: var(--pink);
+    font-size: 50px;
+    &:before {
+        content: '';
+        display: block;
+        width: 63px;
+        height: 54px;
+        position: absolute;
+        left: -32px;
+        top: 8px;
+        z-index: -1;
+        background: url('../icons/boot-grad.svg')  center (center/cover) no-repeat;
+    }
+    &.blue {
+        color: var(--main-4);
+        &:before {
+            background: url('../icons/boot-pink.svg')  center (center/cover) no-repeat;
+        }
+    }
+}
+
+h3 {
+    color: var(--main-3);
+    font-size: 35px;
+    &.white {
+        color: var(--white);
+    }
+    &.pink {
+        color: var(--main-2);
+    }
+    &.small {
+        font-size: 30px;
+    }
+}
+
+h4 {
+    font-size: 26px;
+    color: var(--main-2);
+    font-style: italic;
+}
+
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 44px;
+        &:before {
+            left: -24px;
+            width: 51px;
+            height: 44px;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        &.small {
+            font-size: 26px;
+        }
+    }
+    h4 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:575px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+        &:before {
+            top: 2px;
+            left: -20px;
+            width: 35px;
+            height: 30px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}
