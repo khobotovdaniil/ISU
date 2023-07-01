@@ -3991,7 +3991,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //static/dynamic menu
   const logoBlock = document.getElementById('logoblock');
   window.onscroll = function () {
-    if (window.pageYOffset > 200) {
+    if (window.pageYOffset > 150) {
       logoBlock.classList.add('header__logoblock-wide');
       logoBlock.classList.remove('header__logoblock-normal');
     } else {
@@ -3999,11 +3999,16 @@ window.addEventListener('DOMContentLoaded', () => {
       logoBlock.classList.remove('header__logoblock-wide');
     }
   };
-  new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide', {
+  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide', {
     type: 'carousel',
     startAt: 0,
-    perView: 1
-  }).mount();
+    perView: 1,
+    autoplay: 5000,
+    hoverpause: false,
+    animationTimingFunc: 'ease-in-out',
+    animationDuration: 1000
+  });
+  glide.mount();
 });
 
 /***/ })

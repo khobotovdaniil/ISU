@@ -6,22 +6,22 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 50px;
     color: var(--white);
 }
 
 h2 {
     position: relative;
     color: var(--pink);
-    font-size: 50px;
+    font-size: 40px;
     &:before {
         content: '';
         display: block;
-        width: 63px;
-        height: 54px;
+        width: 52px;
+        height: 45px;
         position: absolute;
-        left: -32px;
-        top: 8px;
+        left: -28px;
+        top: 2px;
         z-index: -1;
         background: url('../icons/boot-grad.svg')  center (center/cover) no-repeat;
     }
@@ -56,15 +56,15 @@ h4 {
 
 @media (max-width:767px) {
     h1 {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     h2 {
-        font-size: 44px;
+        font-size: 35px;
         &:before {
-            left: -24px;
-            width: 51px;
-            height: 44px;
+            left: -22px;
+            width: 43px;
+            height: 37px;
         }
     }
 

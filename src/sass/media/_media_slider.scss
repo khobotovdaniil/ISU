@@ -1,0 +1,45 @@
+@media (max-width:1139px) {
+    .glide {
+        &__arrow {
+            &:before, &:after {
+                height: 6px;
+            }
+            &--left {
+                &:before {
+                    top: 12px;
+                    left: 5px;
+                }
+                &:after {
+                    left: 5px;
+                }
+            }
+            &--right {
+                &:before {
+                    top: 12px;
+                    right: 5px;
+                }
+                &:after {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+
+    .slider {
+        &__content {
+            padding: 0 45px;
+        }
+    }
+}
+
+@media (max-width:575px) { 
+    .glide {
+        &__arrows {
+            display: none;
+        }
+    }
+}

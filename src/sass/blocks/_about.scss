@@ -1,0 +1,14 @@
+.about {
+    min-height: 550px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 5fr 7fr; 
+    }
+    &__photo {
+        grid-row: 1 / 4;
+    }
+    &__header {
+        margin: 90px auto 0 auto;
+        
+    }
+}

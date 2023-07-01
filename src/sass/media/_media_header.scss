@@ -1,19 +1,23 @@
 @media (max-width:991px) {
     .header {
         &__buttons {
-            &__group  {
+            &__group {
                 max-width: 300px;
+
                 &_item {
                     margin-top: 5px;
                     height: 30px;
                 }
             }
         }
+
         &__logoblock {
             &-normal {
                 width: 210px;
             }
+
             top: -90px;
+
             &__logo {
                 margin: 40px auto;
                 width: 153px;
@@ -21,6 +25,7 @@
             }
         }
     }
+
     .hamburger {
         display: block;
     }
@@ -30,35 +35,43 @@
 @media (max-width:767px) {
     .header {
         height: 75px;
+
         &__buttons {
-            &__group  {
+            &__group {
                 max-width: 200px;
+
                 &_item {
                     img {
                         &:hover {
                             filter: drop-shadow(var(--shadow));
                         }
                     }
+
                     &-pc {
                         display: none;
                     }
                 }
             }
         }
+
         &__logoblock {
             &-normal {
                 width: 230px;
                 height: 162px;
             }
+
             &-wide {
                 height: 162px;
             }
+
             top: -80px;
+
             &__logo {
                 margin: 15px auto;
             }
         }
     }
+
     .menu {
         display: none;
     }
@@ -66,7 +79,48 @@
 
 
 @media (max-width:575px) {
-  .header {
-        display: none;
+    .header {
+        height: 60px;
+        padding-top: 5px;
+        display: block;
+
+        &__logo {
+            display: block;
+            width: 93px;
+            height: 38px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__buttons {
+            &__group {
+                &_item {
+                    &-tablet {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__logoblock {
+            &-normal {
+                width: 100vw;
+                animation: none;
+                border-radius: 0px;
+                height: 60px;
+                top: -10px;
+                padding-top: 0;
+            }
+            &-wide {
+                animation: none;
+                height: 60px;   
+                top: -10px;
+            }
+            &__logo {
+                display: none;
+            }
+        }
     }
 }
