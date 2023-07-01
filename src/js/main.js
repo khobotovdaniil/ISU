@@ -1,4 +1,5 @@
 import Glide from '@glidejs/glide';
+import WOW from 'wow.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		type: 'carousel',		
 		startAt: 0,
 		perView: 1,
+		gap: 0,
 		autoplay: 5000,
 		hoverpause: false,
 		animationTimingFunc: 'ease-in-out',
@@ -27,4 +29,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	glide.mount();
 
+
+	const wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		live: true
+	});
+
+	wow.init();
 });

@@ -58,13 +58,18 @@
     }
 }
 
-
-@media (max-width:767px) {
+@media (max-width:991px) {
     .button {
         width: 200px;
         height: 60px;
         font-size: 34px;
         padding-bottom: 6px;
+    }
+}
+
+
+@media (max-width:767px) {
+    .button {
         &.active {
             &:hover {
                 text-shadow: 1px 1px 4px var(--main-1);

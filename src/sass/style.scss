@@ -1,9 +1,12 @@
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/bootstrap-grid.min';
 @import 'libs/fonts';
+@import 'libs/_animate.min';
 
 @import 'base/variables';
-@import 'base/mixins';
+// @import 'base/mixins';
+@import 'base/headers';
+@import 'base/buttons';
 
 // header {
 //     background-color: var(--bg-color);
@@ -82,14 +85,12 @@ a {
     }
 }
 
-@import 'base/headers';
-@import 'base/buttons';
+
 @import 'blocks/header';
 @import 'media/media_header';
 @import 'blocks/slider';
 @import 'media/media_slider';
 @import 'blocks/about';
 @import 'media/media_about';
-
 
 @import 'base/animations';
