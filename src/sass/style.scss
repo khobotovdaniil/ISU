@@ -1,10 +1,14 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/bootstrap-grid.min';
 @import 'libs/fonts';
 @import 'libs/_animate.min';
 
+
 @import 'base/variables';
-// @import 'base/mixins';
+@import 'base/mixins';
+@import 'base/text';
 @import 'base/headers';
 @import 'base/buttons';
 
@@ -12,79 +16,18 @@
 //     background-color: var(--bg-color);
 // }
 
-* {
-    font-family: 'Philosopher', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text);
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: var(--main-2);
-    font-style: italic;
-}
-
-.gradient {
-    background-image: var(--light-gradient);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-}
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
 }
 
-.bold {
-    font-size: 18px;
-    font-weight: 700;
+.divider {
+    width: 250px;
+    height: 3px;
+    border-radius: 50px;
+    background-image: var(--light-gradient);
 }
-
-.white {
-    color: var(--white);
-    font-style: italic;
-    font-size: 18px;
-    &.small {
-        font-size: 14px;
-    }
-}
-
-@media (max-width:767px) {
-    *{
-        font-size: 14px;
-    } 
-    .bold {
-        font-size: 16px;
-    }
-    a {
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-@media (max-width:575px) {
-    *{
-        font-size: 12px;
-    } 
-    .bold {
-        font-size: 12px;
-    }
-    .white {
-        font-size: 12px;
-        &.small {
-            font-size: 12px;
-        }
-    }
-}
-
 
 @import 'blocks/header';
 @import 'media/media_header';
@@ -92,5 +35,8 @@ a {
 @import 'media/media_slider';
 @import 'blocks/about';
 @import 'media/media_about';
+@import 'blocks/group';
+@import 'media/media_group';
+
 
 @import 'base/animations';

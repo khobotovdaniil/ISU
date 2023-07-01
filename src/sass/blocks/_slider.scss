@@ -1,75 +1,5 @@
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-.glide {
-    &__track {
-
-        position: relative;
-    }
-    &__slide {
-        position: relative;
-
-        img {
-            display: block;
-            width: 100%;
-            height: 90vh;
-            object-fit: cover;
-        }
-    }
-    &__arrows {
-        padding: 0 50px;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        width: 100vw;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-    }
-    &__arrow {
-        width: 40px;
-        height: 80px;
-        background: none;
-        border: none;
-        &:before, &:after {
-            position: absolute;
-            content:'';
-            display: block;
-            width: 52px;
-            height: 12px;
-            border-radius: 100px;
-            background: var(--main-1);
-        }
-        &--left {
-            &:before {
-                top: 15px;
-                left: 20px;
-                transform: rotate(-55deg);
-            }
-            &:after {
-                top: 50px;
-                left: 20px;
-                transform: rotate(55deg);
-            }
-        }
-        &--right {
-            &:before {
-                top: 15px;
-                right: 20px;
-                transform: rotate(-125deg);
-            }
-            &:after {
-                top: 50px;
-                right: 20px;
-                transform: rotate(125deg);
-            }
-        }
-    }
-}
-
-
 .slider {
-    height: 90vh;
-    background-color: rgba(0,0,0,0.3);
+    height: 600px;
     &__content {
         padding: 0 60px;
         position: absolute;
@@ -80,6 +10,55 @@
     }
     &__subheader {
         margin-left: 150px;
+    }
+
+    .glide {
+        &__track {
+            position: relative;
+        }
+        &__slide {
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                height: 680px;
+                object-fit: cover;
+            }
+        }
+        &__arrows {
+            padding: 0 50px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+        &__arrow {
+            width: 40px;
+            height: 80px;
+            background: none;
+            border: none;
+            &--left {
+                @include arrow_left;
+                &:before {
+                    left: 20px;
+                }
+                &:after {
+                    left: 20px;
+                }
+            }
+            &--right {
+                @include arrow_right;
+                &:before {
+                    right: 20px;
+                }
+                &:after {
+                    right: 20px;
+                }
+            }
+        }
     }
 }
 

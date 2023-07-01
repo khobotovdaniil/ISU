@@ -4541,7 +4541,7 @@ window.addEventListener('DOMContentLoaded', () => {
       logoBlock.classList.remove('header__logoblock-wide');
     }
   };
-  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide', {
+  var slider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
@@ -4551,11 +4551,12 @@ window.addEventListener('DOMContentLoaded', () => {
     animationTimingFunc: 'ease-in-out',
     animationDuration: 1000
   });
-  glide.mount();
+  slider.mount();
   const wow = new wow_js__WEBPACK_IMPORTED_MODULE_1___default.a({
     boxClass: 'wow',
     animateClass: 'animated',
-    offset: 0,
+    offset: 100,
+    mobile: false,
     live: true
   });
   wow.init();

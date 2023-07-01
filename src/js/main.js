@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	var glide = new Glide('.glide', {
+	var slider = new Glide('.slider', {
 		type: 'carousel',		
 		startAt: 0,
 		perView: 1,
@@ -27,14 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		animationDuration: 1000,
 	});
 
-	glide.mount();
-
+	slider.mount();
 
 	const wow = new WOW({
 		boxClass: 'wow',
 		animateClass: 'animated',
-		offset: 0,
-		live: true
+		offset: 100,
+		mobile: false,  
+		live: true,
 	});
 
 	wow.init();
