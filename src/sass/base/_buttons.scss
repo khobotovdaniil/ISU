@@ -19,9 +19,9 @@
         text-shadow: 1px 1px 4px var(--main-1);
         box-shadow: 1px 1px 4px var(--main-1);
     }
-    &.active {
+    &-active {
         text-shadow: 1px 1px 4px var(--main-1);
-        background-color: var(--main-2);
+        background-image: var(--light-gradient);
     }
     &-small{
         width: 200px;

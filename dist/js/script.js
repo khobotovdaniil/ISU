@@ -4527,6 +4527,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 /* harmony import */ var wow_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! wow.js */ "./node_modules/wow.js/dist/wow.js");
 /* harmony import */ var wow_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(wow_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_groupClasses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/groupClasses */ "./src/js/modules/groupClasses.js");
+/* harmony import */ var _modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/highlightMenuObjects */ "./src/js/modules/highlightMenuObjects.js");
+
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -4541,7 +4545,9 @@ window.addEventListener('DOMContentLoaded', () => {
       logoBlock.classList.remove('header__logoblock-wide');
     }
   };
-  var slider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider', {
+
+  //Slider
+  const mainSlider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
@@ -4551,7 +4557,9 @@ window.addEventListener('DOMContentLoaded', () => {
     animationTimingFunc: 'ease-in-out',
     animationDuration: 1000
   });
-  slider.mount();
+  mainSlider.mount();
+
+  //WoW.js
   const wow = new wow_js__WEBPACK_IMPORTED_MODULE_1___default.a({
     boxClass: 'wow',
     animateClass: 'animated',
@@ -4560,7 +4568,88 @@ window.addEventListener('DOMContentLoaded', () => {
     live: true
   });
   wow.init();
+
+  //group Classes slider
+  Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__["default"])('.menu_item__link', 'menu_item__link-active');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/groupClasses.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/groupClasses.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function groupClasses() {
+  const buttons = document.querySelectorAll('.group__button');
+  const classes = document.querySelectorAll('.group__class');
+  document.querySelector('.group__buttons').addEventListener('click', e => {
+    const target = e.target;
+    buttons.forEach((item, i) => {
+      if (target == item) {
+        buttons.forEach(item => {
+          item.setAttribute('disabled', '');
+          if (item.classList.contains('button-active')) {
+            item.classList.remove('button-active');
+          }
+          setTimeout(() => {
+            item.removeAttribute('disabled', '');
+          }, 600);
+        });
+        classes.forEach(item => {
+          if (item.classList.contains('group__class-active') && item != classes[i]) {
+            item.classList.remove('group__class-active');
+            item.classList.add('group__class-exit');
+            setTimeout(() => {
+              item.classList.remove('group__class-exit');
+            }, 600);
+            setTimeout(() => {
+              classes[i].classList.add('group__class-active');
+            }, 600);
+          }
+        });
+        item.classList.add('button-active');
+      }
+      ;
+    });
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (groupClasses);
+
+/***/ }),
+
+/***/ "./src/js/modules/highlightMenuObjects.js":
+/*!************************************************!*\
+  !*** ./src/js/modules/highlightMenuObjects.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function highlightMenuObjects(selector, active) {
+  const getId = link => link.getAttribute('href').replace('#', '');
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll(selector).forEach(link => {
+          link.classList.toggle(active, getId(link) === entry.target.id);
+        });
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+  document.querySelectorAll('section').forEach(section => {
+    sectionObserver.observe(section);
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (highlightMenuObjects);
 
 /***/ })
 

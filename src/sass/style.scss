@@ -29,6 +29,13 @@
     background-image: var(--light-gradient);
 }
 
+@media (max-width:767px) {
+    .divider {
+        width: 150px;
+        height: 2px;
+    }
+}
+
 @import 'blocks/header';
 @import 'media/media_header';
 @import 'blocks/slider';

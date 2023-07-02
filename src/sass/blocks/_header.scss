@@ -38,7 +38,7 @@
         top: -80px;
         transform: translateX(-50%); 
         background-image: var(--dark-gradient);
-        height: 200px;
+        height: 190px;
         z-index: -1;
         &-normal {
             width: 30%;
@@ -63,7 +63,6 @@
 }
 
 .menu {
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     &__list {
@@ -75,53 +74,51 @@
         padding: 0 10px;
     }
     &_item {
-        a {
+        &__link {
             font-family: 'Sansita', sans-serif;
             font-weight: 700;
             font-size: 25px;
             text-transform: capitalize;
-            color: var(--white);                         
-        }
-        &.active {
-            position: relative;
-            background-image: var(--light-gradient);
-            background-size: 100%;
-            background-repeat: repeat;
-            -webkit-background-clip: text, border;
-            -webkit-text-fill-color: transparent; 
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-            &:before {
-                content: '◂';
-                font-size: 25px;
-                position: absolute;
-                z-index: 1;
-                left: -20px;
-                top: 2px;
+            color: var(--white);    
+            &-active {
+                position: relative;
                 background-image: var(--light-gradient);
                 background-size: 100%;
                 background-repeat: repeat;
-                -webkit-background-clip: text;
+                -webkit-background-clip: text, border;
                 -webkit-text-fill-color: transparent; 
                 -moz-background-clip: text;
                 -moz-text-fill-color: transparent;
-                
-            }
-            &:after {
-                content: '▸';
-                font-size: 25px;    
-                position: absolute;
-                z-index: 1;
-                top: 2px;
-                background-image: var(--light-gradient);
-                background-size: 100%;
-                background-repeat: repeat;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent; 
-                -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
-                transform: translateX(0%); 
-            }
+                &:before {
+                    content: '◂';
+                    position: absolute;
+                    z-index: 1;
+                    left: -26px;
+                    top: -3px;
+                    background-image: var(--light-gradient);
+                    background-size: 100%;
+                    background-repeat: repeat;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    -moz-background-clip: text;
+                    -moz-text-fill-color: transparent;
+                    
+                }
+                &:after {
+                    content: '▸';
+                    position: absolute;
+                    z-index: 1;
+                    top: -3px;
+                    background-image: var(--light-gradient);
+                    background-size: 100%;
+                    background-repeat: repeat;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    -moz-background-clip: text;
+                    -moz-text-fill-color: transparent;
+                    transform: translateX(0%); 
+                }
+            }                     
         }
     }
 }

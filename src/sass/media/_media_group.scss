@@ -1,0 +1,39 @@
+@media (max-width:991px) {
+    .group {
+        &__class {
+            &__content {
+                width: calc(100% - 245px);
+            }
+            &__img {
+                width: 220px;
+            }
+        }
+        &__buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .group {
+        &__class {
+            padding: 15px 30px;
+            &__wrapper {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width:575px) { 
+    .group {
+        &__class {
+            padding: 10px;
+            &__img {
+                width: 40%;
+            }
+        }
+    }
+}

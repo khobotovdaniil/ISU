@@ -73,15 +73,15 @@
 
             <nav class="menu">
                 <ul class="menu__list">
-                    <li class="menu_item active"><a href="#">Home</a></li>
-                    <li class="menu_item"><a href="#">About</a></li>
-                    <li class="menu_item"><a href="#">Classes</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#slider">Home</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#about">About</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#group">Classes</a></li>
                 </ul>
 
                 <ul class="menu__list">
-                    <li class="menu_item"><a href="#">Prices</a></li>
-                    <li class="menu_item"><a href="#">Reviews</a></li>
-                    <li class="menu_item"><a href="#">Contact</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#prices">Prices</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#reviews">Reviews</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -99,21 +99,30 @@
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                     <li class="glide__slide">
-                        <img src="./img/slider/Slide-1.jpg" alt="slide-1">
+                        <div class="slider__img">
+                            <img src="./img/slider/Slide-1.jpg" alt="slide-1">
+                            <div class="slider__gradient"></div>
+                        </div>
                         <div class="slider__content container">
                             <h1 class="slider__header">Zoom Academy</h1>
                             <h1 class="slider__subheader">of Figure Skating</h1>
                         </div>
                     </li>
                     <li class="glide__slide">
-                        <img src="./img/slider/Slide-2.jpg" alt="slide-2">
+                        <div class="slider__img">
+                            <img src="./img/slider/Slide-2.jpg" alt="slide-2">
+                            <div class="slider__gradient"></div>
+                        </div>
                         <div class="slider__content container">
                             <h1 class="slider__header">Group classes</h1>
                             <h1 class="slider__subheader"></h1>
                         </div>
                     </li>
                     <li class="glide__slide">
-                        <img src="./img/slider/Slide-3.jpg" alt="slide-3">
+                        <div class="slider__img">
+                            <img src="./img/slider/Slide-3.jpg" alt="slide-3">
+                            <div class="slider__gradient"></div>
+                        </div>
                         <div class="slider__content container">
                             <h1 class="slider__header">Individual Trainig</h1>
                             <h1 class="slider__subheader">from the World Champion</h1>
@@ -126,12 +135,6 @@
                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">"></button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="photos" id="photos">
-        <div class="container">
-
         </div>
     </section>
 
@@ -164,19 +167,77 @@
                 <div class="group__header">
                     <h2 class="blue">Our Group Classes</h2>
                 </div>
-                <div class="group__class">
+                
+                <div class="group__class group__class-active">
                     <div class="group__class__content">
                         <h3 class="pink group__class__header">Jumps</h3>
                         <div class="group__class__text">
                             <p>Text: It is a long established fact that a reader will be distracted by the readable content of a page  when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                         </div>
                         <div class="divider"></div>
-                        <div class="group__class__schedule">
-                            <div class="group__class__day">
-                                <p class="bold">Weekly on Saturdays:</p>
+                        <div class="group__class__wrapper">
+                            <div class="group__class__schedule">
+                                <div class="group__class__day">
+                                    <p class="bold">Weekly on Saturdays:</p>
+                                </div>
+                                <div class="group__class__time">
+                                    <p class="bold">6:00 - 7:00 PM GMT+3</p>
+                                </div>
                             </div>
-                            <div class="group__class__time">
-                                <p class="bold">6:00 - 7:00 PM GMT+3</p>
+                            <div class="group__class__button">
+                                <button class="button button-small button-purple">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group__class__img">
+                        <img src="./img/group/Jumps.jpg" alt="Jumps">
+                    </div>
+                </div>
+
+                <div class="group__class">
+                    <div class="group__class__content">
+                        <h3 class="pink group__class__header">Flexibility</h3>
+                        <div class="group__class__text">
+                            <p>Text: It is a long established fact that a reader will be distracted by the readable content of a page  when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="group__class__wrapper">
+                            <div class="group__class__schedule">
+                                <div class="group__class__day">
+                                    <p class="bold">Weekly on Saturdays:</p>
+                                </div>
+                                <div class="group__class__time">
+                                    <p class="bold">6:00 - 7:00 PM GMT+3</p>
+                                </div>
+                            </div>
+                            <div class="group__class__button">
+                                <button class="button button-small button-purple">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group__class__img">
+                        <img src="./img/group/Jumps.jpg" alt="Jumps">
+                    </div>
+                </div>
+
+                <div class="group__class">
+                    <div class="group__class__content">
+                        <h3 class="pink group__class__header">Spins</h3>
+                        <div class="group__class__text">
+                            <p>Text: It is a long established fact that a reader will be distracted by the readable content of a page  when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="group__class__wrapper">
+                            <div class="group__class__schedule">
+                                <div class="group__class__day">
+                                    <p class="bold">Weekly on Saturdays:</p>
+                                </div>
+                                <div class="group__class__time">
+                                    <p class="bold">6:00 - 7:00 PM GMT+3</p>
+                                </div>
+                            </div>
+                            <div class="group__class__button">
+                                <button class="button button-small button-purple">Join</button>
                             </div>
                         </div>
                     </div>
@@ -186,9 +247,9 @@
                 </div>
 
                 <div class="group__buttons">
-                    <button class="button active">Jumps</button>
-                    <button class="button">Flexibility</button>
-                    <button class="button">Spins</button>
+                    <button class="button button-active group__button">Jumps</button>
+                    <button class="button group__button">Flexibility</button>
+                    <button class="button group__button">Spins</button>
                 </div>
             </div>
         </div>
@@ -212,7 +273,7 @@
         </div>
     </section>
 
-    <section class="advantages" id="">
+    <section class="advantages" id="advantages">
         <div class="container">
 
         </div>
@@ -230,7 +291,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <!-- <div class="container">
             <div>
                 <h1 class="gradient">contuct us short Text: subheader. Lorem ipsum English Text</h1>

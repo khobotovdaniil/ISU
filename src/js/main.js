@@ -1,6 +1,10 @@
 import Glide from '@glidejs/glide';
 import WOW from 'wow.js';
 
+import groupClasses from './modules/groupClasses';
+import highlightMenuObjects from './modules/highlightMenuObjects';
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
 	//static/dynamic menu
@@ -16,7 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	var slider = new Glide('.slider', {
+	//Slider
+	const mainSlider = new Glide('.slider', {
 		type: 'carousel',		
 		startAt: 0,
 		perView: 1,
@@ -26,9 +31,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		animationTimingFunc: 'ease-in-out',
 		animationDuration: 1000,
 	});
+	mainSlider.mount();
 
-	slider.mount();
 
+	//WoW.js
 	const wow = new WOW({
 		boxClass: 'wow',
 		animateClass: 'animated',
@@ -36,6 +42,12 @@ window.addEventListener('DOMContentLoaded', () => {
 		mobile: false,  
 		live: true,
 	});
-
 	wow.init();
+
+	//group Classes slider
+	groupClasses();
+	
+	highlightMenuObjects('.menu_item__link', 'menu_item__link-active');
+
+	
 });
