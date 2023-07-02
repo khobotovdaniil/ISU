@@ -1,0 +1,25 @@
+@media (max-width:767px) {
+    .promo {
+        background: url('../img/bg/promo_tablet.png')  center (center/cover) no-repeat;
+    }
+}
+
+
+@media (max-width:575px) {
+    .promo {
+        min-height: 300px;
+        background: url('../img/bg/promo_mobile.png')  center (center/cover) no-repeat;
+        &__wrapper {
+            height: 200px;
+        }
+        &__text {
+            grid-column: 1 / 3;
+        }
+        &__button {
+            grid-column: 1 / 3;
+            justify-content: center;
+        }
+    }
+}
+
+

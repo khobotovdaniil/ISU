@@ -28,10 +28,24 @@ window.addEventListener('DOMContentLoaded', () => {
 		gap: 0,
 		autoplay: 5000,
 		hoverpause: false,
+		focusAt: 'center',
 		animationTimingFunc: 'ease-in-out',
 		animationDuration: 1000,
 	});
 	mainSlider.mount();
+
+	const pricesSlider = new Glide('.prices', {
+		type: 'carousel',		
+		startAt: 0,
+		perView: 3,
+		gap: 0,
+		autoplay: 5000,
+		hoverpause: true,
+		focusAt: 'center',
+		animationTimingFunc: 'ease-in-out',
+		animationDuration: 1000,
+	});
+	pricesSlider.mount();
 
 
 	//WoW.js

@@ -1,0 +1,80 @@
+.prices {
+    min-height: 650px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: url('../img/bg/prices.png')  center (center/cover) no-repeat;
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+    &__slide {
+        width: 250px;
+        height: 100%;
+        border-radius: 50px;
+        margin: 0 auto;
+        border: 1px solid var(--main-4);
+        background: var(--pink);
+    }
+    .glide {
+        margin-top: 30px;
+        &__slide {
+            padding-top: 20px;
+            height: 380px;
+            &--active {
+                padding-top: 0px;
+                height: 420px;
+            }
+        }
+        &__arrows {
+            padding: 0 50px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+        &__arrow {
+            width: 40px;
+            height: 80px;
+            background: none;
+            border: none;
+            &--left {
+                @include arrow_left;
+                &:before {
+                    left: -8px;
+                }
+                &:after {
+                    left: -8px;
+                }
+            }
+            &--right {
+                @include arrow_right;
+                &:before {
+                    right: -8px;
+                }
+                &:after {
+                    right: -8px;
+                }
+            }
+        }
+        &__bullets {
+            display: flex;
+            justify-content: center;
+        }
+        &__bullet {
+            height: 20px;
+            width: 20px;
+            margin: 20px 5px;
+            border-radius: 100%;
+            background-color: var(--pink);
+            border: 1px solid var(--main-3);
+            box-shadow: 2px 2px 8px 0px rgba(143, 127, 241, 0.30) inset;
+            &--active {
+                background-image: var(--light-gradient);
+                box-shadow: var(--shadow);
+            }
+        }
+    }
+}

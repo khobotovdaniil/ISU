@@ -4554,10 +4554,23 @@ window.addEventListener('DOMContentLoaded', () => {
     gap: 0,
     autoplay: 5000,
     hoverpause: false,
+    focusAt: 'center',
     animationTimingFunc: 'ease-in-out',
     animationDuration: 1000
   });
   mainSlider.mount();
+  const pricesSlider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.prices', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 3,
+    gap: 0,
+    autoplay: 5000,
+    hoverpause: true,
+    focusAt: 'center',
+    animationTimingFunc: 'ease-in-out',
+    animationDuration: 1000
+  });
+  pricesSlider.mount();
 
   //WoW.js
   const wow = new wow_js__WEBPACK_IMPORTED_MODULE_1___default.a({
