@@ -97,14 +97,13 @@
             }
         }
         &__arrows {
-            padding: 0 50px;
             position: absolute;
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 105%;
             top: 50%;
-            transform: translateY(-50%);
-            left: 0;
+            transform: translateY(-50%) translateX(-50%);
+            left: 50%;
         }
         &__arrow {
             width: 40px;
@@ -113,21 +112,9 @@
             border: none;
             &--left {
                 @include arrow_left;
-                &:before {
-                    left: -8px;
-                }
-                &:after {
-                    left: -8px;
-                }
             }
             &--right {
                 @include arrow_right;
-                &:before {
-                    right: -8px;
-                }
-                &:after {
-                    right: -8px;
-                }
             }
         }
         &__bullets {
