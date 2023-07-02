@@ -36,15 +36,6 @@ h2 {
 h3 {
     color: var(--main-3);
     font-size: 35px;
-    &.white {
-        color: var(--white);
-    }
-    &.pink {
-        color: var(--main-2);
-    }
-    &.small {
-        font-size: 30px;
-    }
 }
 
 h4 {
@@ -70,9 +61,6 @@ h4 {
 
     h3 {
         font-size: 30px;
-        &.small {
-            font-size: 26px;
-        }
     }
     h4 {
         font-size: 24px;

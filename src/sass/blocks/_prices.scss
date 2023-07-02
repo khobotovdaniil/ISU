@@ -1,28 +1,99 @@
 .prices {
-    min-height: 650px;
+    min-height: 630px;
     padding-top: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background: url('../img/bg/prices.png')  center (center/cover) no-repeat;
+    position: relative;
     &__header {
         display: flex;
         justify-content: center;
     }
     &__slide {
-        width: 250px;
+        width: 280px;
         height: 100%;
         border-radius: 50px;
         margin: 0 auto;
-        border: 1px solid var(--main-4);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid var(--main-2);
         background: var(--pink);
+        text-align: center;
+        overflow: hidden; 
+        &__top {
+            padding-top: 10px;
+            background-color: var(--main-2);
+            height: 30%;
+            position: relative;
+            &__price {
+                font-size: 16px;
+                margin-bottom: 0;
+                color: var(--main-2);
+            }
+            &__circle {
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                position: absolute;
+                background-color: var(--pink);
+                box-shadow: var(--shadow);
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        &__text {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__bottom {
+            background-color: var(--main-2);
+            height: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &:hover {
+                h3 {
+                    color: var(--main-1);
+                }
+            }
+        }
     }
     .glide {
         margin-top: 30px;
+        &__track {
+            height: 420px;
+        }
         &__slide {
             padding-top: 20px;
             height: 380px;
             &--active {
                 padding-top: 0px;
                 height: 420px;
+                .prices__slide {
+                    border: 1px solid var(--main-3);
+                    &__top {
+                        background-color: var(--main-3);
+                        &__circle {
+                            width: 90px;
+                            height: 90px;
+                            bottom: -45px;
+                        }
+                        &__price {
+                            font-size: 30px;
+                            color: var(--main-3);
+                        }
+                    }
+                    &__bottom {
+                        background-color: var(--main-3);
+                    }
+                }
+
             }
         }
         &__arrows {
@@ -60,6 +131,9 @@
             }
         }
         &__bullets {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
         }
@@ -76,5 +150,14 @@
                 box-shadow: var(--shadow);
             }
         }
+    }
+    &__wave {
+        position: absolute;
+        height: 260px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: url('../img/bg/prices_wave.png')  center (center/cover) no-repeat;
+        z-index: -1;
     }
 }

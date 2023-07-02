@@ -4568,7 +4568,7 @@ window.addEventListener('DOMContentLoaded', () => {
     hoverpause: true,
     focusAt: 'center',
     animationTimingFunc: 'ease-in-out',
-    animationDuration: 1000
+    animationDuration: 500
   });
   pricesSlider.mount();
 

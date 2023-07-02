@@ -4,6 +4,37 @@
     padding: 0;
     color: var(--text);
     font-size: 16px;
+    &.gradient {
+        background-image: var(--light-gradient);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    
+    &.bold {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    &.white {
+        color: var(--white);
+    }
+    
+    &.italic {
+        font-style: italic;
+        font-size: 18px;
+    }
+    
+    &.small {
+        font-size: 14px;
+    }
+    
+    &.pink {
+        color: var(--main-2);
+    }
 }
 
 a {
@@ -12,29 +43,7 @@ a {
     font-style: italic;
 }
 
-.gradient {
-    background-image: var(--light-gradient);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-}
 
-.bold {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.white {
-    color: var(--white);
-    font-style: italic;
-    font-size: 18px;
-    &.small {
-        font-size: 14px;
-    }
-}
 
 @media (max-width:767px) {
     *{
@@ -57,10 +66,10 @@ a {
     .bold {
         font-size: 12px;
     }
-    .white {
+    .italic {
         font-size: 12px;
-        &.small {
-            font-size: 12px;
-        }
+    }
+    .small {
+        font-size: 12px;
     }
 }
