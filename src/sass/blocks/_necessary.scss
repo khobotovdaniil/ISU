@@ -16,7 +16,7 @@
         margin-top: 20px;
         display: grid;
         grid-template-columns: 1fr 2fr; 
-        z-index: 1;
+        z-index: 2;
     }
     &__list {
         grid-row: 1 / 3;
@@ -32,6 +32,7 @@
         position: absolute;
         top: 40%;
         left: 50%;
+        z-index: 1;
         img {
             opacity: 0.8;
             width: 100%;
