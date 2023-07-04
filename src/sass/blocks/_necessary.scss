@@ -1,0 +1,41 @@
+.necessary {
+    min-height: 350px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: url('../img/bg/necessary.png')  center (center/cover) no-repeat;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative; 
+    }
+    &__header {
+        text-align: center;
+        grid-column: 1 / 4;
+    }
+    &__content {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        z-index: 1;
+    }
+    &__list {
+        grid-row: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        img {
+            opacity: 0.8;
+            width: 100%;
+            object-fit: cover; 
+        }
+    }
+}

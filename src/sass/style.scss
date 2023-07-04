@@ -31,6 +31,26 @@
     background-image: var(--light-gradient);
 }
 
+ul {
+    &.cube {
+        list-style-type: none;
+        li {
+            margin-left: 10px;
+            position: relative;
+            margin-bottom: 10px;
+            &:before {
+                content: '';
+                background-image: url(../icons/list_item.svg);
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: -40px;
+                top: -4px;
+            }
+        }
+    }
+}
+
 @media (max-width:767px) {
     .divider {
         width: 150px;
@@ -50,5 +70,10 @@
 @import 'media/media_promo';
 @import 'blocks/prices';
 @import 'media/media_prices';
+@import 'blocks/necessary';
+@import 'media/media_necessary';
+
+
+@import 'blocks/footer';
 
 @import 'base/animations';
