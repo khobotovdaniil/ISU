@@ -1,0 +1,85 @@
+.glide {
+    &__arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+    }
+    &__arrow {
+        width: 40px;
+        height: 80px;
+        background: none;
+        border: none;
+        &--left {
+            @include arrow_left;
+        }
+        &--right {
+            @include arrow_right;
+        }
+    }
+    &__bullets {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    &__bullet {
+        height: 20px;
+        width: 20px;
+        margin: 20px 5px;
+        border-radius: 100%;
+        background-color: var(--pink);
+        border: 1px solid var(--main-3);
+        box-shadow: 2px 2px 8px 0px rgba(143, 127, 241, 0.30) inset;
+        &--active {
+            background-image: var(--light-gradient);
+            box-shadow: var(--shadow);
+        }
+    }
+}
+
+@media (max-width:1139px) {
+    .glide {
+        &__arrow {
+            &:before, &:after {
+                height: 6px;
+            }
+            &--left {
+                &:after {
+                    top: 55px;
+                }
+            }
+            &--right {
+                &:after {
+                    top: 55px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) { 
+    .glide {
+        &__bullet {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+
+@media (max-width:575px) { 
+    .glide {
+        &__arrows {
+            display: none;
+        }
+        &__bullet {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

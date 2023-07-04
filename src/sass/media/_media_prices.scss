@@ -1,3 +1,39 @@
 @media (max-width:991px) {
+    .prices {
+        &__slide {
+            width: 240px;
+            &__header {
+                font-size: 30px;
+            }
+        }
+        .glide {
+            &__slide {
+                height: 360px;
+                &--active { 
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
 
+@media (max-width:575px) {
+    .prices {
+        min-height: 500px;
+        padding-top: 30px;
+        &__slide {
+            width: 220px;
+            &__header {
+                font-size: 30px;
+            }
+        }
+        .glide {
+            &__slide {
+                height: 320px;
+                &--active { 
+                    height: 360px;
+                }
+            }
+        }
+    }
 }

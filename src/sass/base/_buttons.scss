@@ -73,6 +73,10 @@
         height: 60px;
         font-size: 34px;
         padding-bottom: 6px;
+        &-purchase {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -127,6 +131,10 @@
             height: 30px;
             font-size: 18px;
             line-height: 16px;
+        }
+        &-purchase {
+            width: 100%;
+            height: 100%;
         }
     }
 }

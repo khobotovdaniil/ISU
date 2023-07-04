@@ -27,6 +27,8 @@
 
 @media (max-width:575px) { 
     .group {
+        min-height: 470px;
+        padding-top: 30px;
         &__class {
             padding: 10px;
             &__wrapper {
