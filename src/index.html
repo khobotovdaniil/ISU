@@ -71,7 +71,7 @@
                 <ul class="menu__list">
                     <li class="menu_item"><a class="menu_item__link" href="#prices">Prices</a></li>
                     <li class="menu_item"><a class="menu_item__link" href="#reviews">Reviews</a></li>
-                    <li class="menu_item"><a class="menu_item__link" href="#contact">Contact</a></li>
+                    <li class="menu_item"><a class="menu_item__link" href="#contacts">Contact</a></li>
                 </ul>
             </nav>
 
@@ -570,9 +570,88 @@
         <div class="reviews__skates"></div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contacts" id="contacts">
         <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts__logo">
+                    <img src="./icons/logo-blue.svg" alt="Logo">
+                </div>
 
+                <div class="contacts__header">
+                    <h2 class="blue">Contact Us</h2>
+                </div>
+
+                <div class="contacts__info">
+                    <div class="contacts__text">
+                        <p>Text: It is a long established fact that a reader will be distracted by the readable content of a page  when looking at its layout. The point  here', making it look like readable English. Many desktop publish. It is a long established fact that a reader will be distracted by the readable content of a page  when looking at its layout. The point  here', making it look like readable English. Many desktop publish.</p>
+                    </div>
+                    <ul class="contacts__list">
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/mail.svg" alt="E-mail"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">SkatingUniversity@gmail.com</a>
+                            </div>
+                        </li>
+
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/instagram.svg" alt="Instagram"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">Skating_University</a>
+                            </div>
+                        </li>
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/watsapp.svg" alt="Watsapp"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">+971 58 508 82 11</a>
+                            </div>
+                        </li>
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/youtube.svg" alt="Youtube"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">@Skating_University</a>
+                            </div>
+                        </li>
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/telegram.svg" alt="Telegram"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">@Skating_University</a>
+                            </div>
+                        </li>
+                        <li class="contacts__list__item">
+                            <div class="contacts__list__item__img">
+                                <a href="#"><img src="./icons/tiktok.svg" alt="TikTok"></a>
+                            </div>
+                            <div class="contacts__list__item__address">
+                                <a href="#">Skating_University</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="form contacts__form">
+                    <input class="form__input" name="name" id="name" type="text" placeholder="Your name">
+                    <input class="form__input" name="email" id="email" type="email" placeholder="Your E-mail">
+                    <textarea class="form__textarea" name="text" id="text" placeholder="Your Message"></textarea>
+
+                    <div class="form__triggers">
+                        <div class="form__policy">
+                            <input class="form__checkbox" name="checkbox" type="checkbox">
+                            <span class="italic">I agree with <a href="/policy.html" target="_blank" rel="noopener noreferrer">privacy policy</a></span>
+                        </div>
+                        <button class="button button-small button-purple form__button">SEND</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -588,6 +667,7 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 

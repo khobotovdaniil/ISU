@@ -1,0 +1,50 @@
+@media (max-width:767px) {
+    .contacts {
+        &__wrapper {
+            column-gap: 10px;
+        }
+        &__list {
+            &__item {
+                &__img {
+                    height: 30px;
+                    width: 50px;
+                }
+                &__address {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .contacts {
+        padding-top: 30px;
+        &__logo {
+            height: 50px;
+            text-align: center;
+        }
+        &__info {
+            grid-column: 1 / 3;
+            order: 1;
+        }
+        &__form {
+            grid-column: 1 / 3;
+        }
+        &__list {
+            &__item {
+                &__img {
+                    height: 20px;
+                    width: 30px;
+                }
+                &__address {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
