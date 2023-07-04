@@ -1,0 +1,21 @@
+@media (max-width:991px) {
+    .reviews {
+        &__slide {
+            padding: 10px 20px;
+            column-gap: 20px;
+        }
+    }
+}
+
+@media (max-width:575px) { 
+    .reviews {
+        padding-top: 30px;
+        &__slide {
+            display: flex;
+            flex-direction: column;
+            &__img {
+                margin: 0 auto;
+            }
+        }
+    }
+}

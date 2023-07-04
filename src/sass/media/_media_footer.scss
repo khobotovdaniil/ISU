@@ -1,0 +1,18 @@
+@media (max-width:991px) {
+    .footer {
+        height: 80px;
+        &__logo {
+            height: 60px;
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .footer {
+        height: 60px;
+        &__logo {
+            height: 40px;
+        }
+    }
+
+}

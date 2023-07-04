@@ -4534,7 +4534,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  //static/dynamic menu
+  //Menu: static/dynamic 
   const logoBlock = document.getElementById('logoblock');
   window.onscroll = function () {
     if (window.pageYOffset > 150) {
@@ -4546,7 +4546,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  //Slider
+  //Glide sliders
   const mainSlider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.slider', {
     type: 'carousel',
     startAt: 0,
@@ -4597,6 +4597,18 @@ window.addEventListener('DOMContentLoaded', () => {
     animationDuration: 500
   });
   pricesSlider.mount();
+  const reviewsSlider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.reviews', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    gap: 0,
+    autoplay: 5000,
+    hoverpause: false,
+    focusAt: 'center',
+    animationTimingFunc: 'ease-in-out',
+    animationDuration: 1000
+  });
+  reviewsSlider.mount();
 
   //WoW.js
   const wow = new wow_js__WEBPACK_IMPORTED_MODULE_1___default.a({
@@ -4608,7 +4620,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   wow.init();
 
-  //group Classes slider
+  //Group classes slider
   Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__["default"])('.menu_item__link', 'menu_item__link-active');
 });

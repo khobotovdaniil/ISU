@@ -1,3 +1,25 @@
 .footer {
-    height: 150px;
+    height: 100px;
+    padding-top: 10px;
+    background-image: var(--dark-gradient);
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    &__logo {
+        text-align: right;
+        height: 80px;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }

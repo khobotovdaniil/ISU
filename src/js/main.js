@@ -7,7 +7,7 @@ import highlightMenuObjects from './modules/highlightMenuObjects';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-	//static/dynamic menu
+	//Menu: static/dynamic 
 	const logoBlock = document.getElementById('logoblock');
 
 	window.onscroll = function () {
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	//Slider
+	//Glide sliders
 	const mainSlider = new Glide('.slider', {
 		type: 'carousel',		
 		startAt: 0,
@@ -73,6 +73,19 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	pricesSlider.mount();
 
+	const reviewsSlider = new Glide('.reviews', {
+		type: 'carousel',		
+		startAt: 0,
+		perView: 1,
+		gap: 0,
+		autoplay: 5000,
+		hoverpause: false,
+		focusAt: 'center',
+		animationTimingFunc: 'ease-in-out',
+		animationDuration: 1000,
+	});
+	reviewsSlider.mount();
+
 
 	//WoW.js
 	const wow = new WOW({
@@ -84,10 +97,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	wow.init();
 
-	//group Classes slider
+	//Group classes slider
 	groupClasses();
 	
 	highlightMenuObjects('.menu_item__link', 'menu_item__link-active');
 
-	
 });
