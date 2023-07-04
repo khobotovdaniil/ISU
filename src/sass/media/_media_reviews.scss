@@ -4,6 +4,33 @@
             padding: 10px 20px;
             column-gap: 20px;
         }
+        &__skates {
+            &:before {
+                width: 85%;
+                left: -17%;
+            }
+            &:after {
+                width: 70%;
+                right: -20%;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .reviews {
+        &__skates {
+            &:before {
+                width: 90%;
+                top: -35%;
+            }
+            &:after {
+                width: 75%; 
+                right: -30%;
+                top: -18%;
+                transform: rotate(12deg);
+            }
+        }
     }
 }
 
@@ -15,6 +42,19 @@
             flex-direction: column;
             &__img {
                 margin: 0 auto;
+            }
+        }
+        &__skates {
+            &:before {
+                width: 100%;
+                top: -10%;
+                left: 30%;
+            }
+            &:after {
+                width: 90%; 
+                left: -10%;
+                top: -45%;
+                transform: rotate(-28deg);
             }
         }
     }
