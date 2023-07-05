@@ -68,6 +68,12 @@
     .menu {
         display: none;
     }
+
+    .hamburger {
+        &:hover {
+            text-shadow: none;
+        }
+    }
 }
 
 

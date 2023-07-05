@@ -131,6 +131,7 @@
     height: 30px;
     width: 45px;
     cursor: pointer;
+    transition: 0.6s all;
     span {
         display: block;
         width: 35px;
@@ -141,5 +142,8 @@
             margin: 7px 0;
             width: 45px;
         }
+    }
+    &:hover {
+        text-shadow: 0px 0px 2px var(--main-1);
     }
 }

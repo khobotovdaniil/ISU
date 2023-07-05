@@ -19,6 +19,9 @@
         &--right {
             @include arrow_right;
         }
+        &:hover {
+            filter: drop-shadow(0px 0px 3px var(--main-2)); 
+        }
     }
     &__bullets {
         position: absolute;
@@ -67,6 +70,11 @@
         &__bullet {
             width: 18px;
             height: 18px;
+        }
+        &__arrow {
+            &:hover {
+                filter: none; 
+            }
         }
     }
 }
