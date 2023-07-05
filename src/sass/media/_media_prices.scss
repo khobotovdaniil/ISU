@@ -23,7 +23,7 @@
             &__bottom {
                 &:hover {
                     h3 {
-                        color: var(--white);
+                        filter: none;
                     }
                 }
             }

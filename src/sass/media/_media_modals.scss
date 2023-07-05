@@ -11,7 +11,7 @@
         &__item {
             &__link {
                 &:hover {
-                    color: var(--white);
+                    filter: none;
                 }
             }
         }
