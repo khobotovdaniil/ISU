@@ -12,7 +12,7 @@
             justify-content: start;
         }
         &__img {    
-            top: 60%;
+            top: 45%;
         }
     }
 }
@@ -21,7 +21,7 @@
     .necessary { 
         min-height: 300px;
         &__img {
-            top: 60%;
+            top: 54%;
         }
     }
 }
@@ -44,13 +44,12 @@
             justify-content: start;
         }
         &__img {
-            position: absolute;
-            left: 30px;
-            top: auto;
-            bottom: -110px;
+            position: absolute; 
+            left: 60px;
+            top: 45%;
             overflow: hidden;
             img {
-                width: 110%;
+                width: 100%;
                 opacity: 0.6;
             }
         }

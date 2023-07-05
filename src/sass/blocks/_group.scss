@@ -5,6 +5,7 @@
     min-height: 700px;
     position: relative;
     background: url('../img/bg/group.png')  center (center/cover) no-repeat;
+    overflow: hidden;
     &__wrapper {
         display: flex;
         flex-direction: column;

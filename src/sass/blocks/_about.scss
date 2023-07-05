@@ -2,6 +2,7 @@
     min-height: 550px;
     position: relative;
     background: url('../img/bg/about.png')  center (center/cover) no-repeat;
+    overflow: hidden;
     &__wrapper {
         display: grid;
         grid-template-columns: 4fr 7fr; 

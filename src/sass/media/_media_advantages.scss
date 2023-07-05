@@ -10,6 +10,7 @@
 @media (max-width:575px) {  
     .advantages {
         background: none;
+        padding-top: 30px;
         &__gradient {
             background: linear-gradient(270deg, #FBF6FF 15%, rgba(236, 182, 244, 0.60) 60%, rgba(166, 13, 219, 0.32));
         }

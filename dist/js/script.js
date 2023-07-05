@@ -4650,7 +4650,7 @@ function groupClasses() {
           }
           setTimeout(() => {
             item.removeAttribute('disabled', '');
-          }, 600);
+          }, 500);
         });
         classes.forEach(item => {
           if (item.classList.contains('group__class-active') && item != classes[i]) {
@@ -4658,10 +4658,10 @@ function groupClasses() {
             item.classList.add('group__class-exit');
             setTimeout(() => {
               item.classList.remove('group__class-exit');
-            }, 600);
+            }, 500);
             setTimeout(() => {
               classes[i].classList.add('group__class-active');
-            }, 600);
+            }, 500);
           }
         });
         item.classList.add('button-active');

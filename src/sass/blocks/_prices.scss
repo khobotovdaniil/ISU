@@ -3,6 +3,7 @@
     padding-top: 60px;
     padding-bottom: 20px;
     background: url('../img/bg/prices.png')  center (center/cover) no-repeat;
+    overflow: hidden;
     position: relative;
     &__header {
         display: flex;
