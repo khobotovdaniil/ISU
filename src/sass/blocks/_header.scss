@@ -1,6 +1,5 @@
 .header {
     position: fixed;
-    padding-top: 10px;
     width: 100%;
     height: 140px;
     transition: 0.5s all;
@@ -32,13 +31,13 @@
         display: none;
     }
     &__logoblock {
-        padding-top: 60px;
+        padding-top: 70px;
         position: absolute;
         left: 50%;
         top: -80px;
         transform: translateX(-50%); 
         background-image: var(--dark-gradient);
-        height: 190px;
+        height: 180px;
         z-index: -1;
         &-normal {
             width: 30%;
@@ -52,10 +51,10 @@
         }
         &__logo {
             margin: 20px auto;
-            width: 245px;
-            height: 100px;
+            height: 80px;
+            text-align: center;
             img {
-                width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         }
@@ -73,7 +72,7 @@
         list-style-type: none;
         padding: 0 10px;
     }
-    &_item {
+    &__item {
         &__link {
             font-family: 'Sansita', sans-serif;
             font-weight: 700;

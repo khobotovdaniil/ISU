@@ -10,14 +10,21 @@
             }
         }
         &__logoblock {
+            padding-top: 60px;
             &-normal {
                 width: 210px;
             }
             top: -90px;
             &__logo {
                 margin: 40px auto;
-                width: 153px;
-                height: 62px;
+                height: 60px;
+            }
+        }
+    }
+    .menu {
+        &__item {
+            &__link {
+                line-height: 23px;
             }
         }
     }
@@ -50,16 +57,17 @@
         }
 
         &__logoblock {
+            padding-top: 70px;
             &-normal {
-                width: 230px;
                 height: 145px;
             }
             &-wide {
-                height: 145px   ;
+                height: 145px  ;
             }
             top: -80px;
             &__logo {
                 margin: 15px auto;
+                height: 50px;
             }
         }
     }
@@ -94,11 +102,12 @@
             }
         }
         &__logoblock {
+            padding-top: 60px;
             &-normal {
                 width: 100vw;
                 animation: none;
                 border-radius: 0px;
-                height: 50px;
+                height: 60px;
                 top: -10px;
                 padding-top: 0;
             }
