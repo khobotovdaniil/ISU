@@ -1,5 +1,6 @@
 @media (max-width:991px) {
     .header {
+        height: 90px;
         &__buttons {
             &__group {
                 max-width: 300px;
@@ -21,13 +22,6 @@
             }
         }
     }
-    .menu {
-        &__item {
-            &__link {
-                line-height: 23px;
-            }
-        }
-    }
 
     .hamburger {
         display: block;
@@ -38,7 +32,6 @@
 @media (max-width:767px) {
     .header {
         height: 75px;
-
         &__buttons {
             &__group {
                 max-width: 200px;

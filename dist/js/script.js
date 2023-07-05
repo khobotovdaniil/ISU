@@ -4529,6 +4529,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var wow_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(wow_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_groupClasses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/groupClasses */ "./src/js/modules/groupClasses.js");
 /* harmony import */ var _modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/highlightMenuObjects */ "./src/js/modules/highlightMenuObjects.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modals */ "./src/js/modules/modals.js");
+
 
 
 
@@ -4619,10 +4621,11 @@ window.addEventListener('DOMContentLoaded', () => {
     live: true
   });
   wow.init();
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
   //Group classes slider
   Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__["default"])('.menu_item__link', 'menu_item__link-active');
+  Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_3__["default"])('.menu__item__link', 'menu__item__link-active');
 });
 
 /***/ }),
@@ -4701,6 +4704,67 @@ function highlightMenuObjects(selector, active) {
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (highlightMenuObjects);
+
+/***/ }),
+
+/***/ "./src/js/modules/modals.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/modals.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function modals() {
+  function bindModal(triggerSelector, modalSelector, closeSelector) {
+    const overlay = document.querySelector('.overlay'),
+      trigger = document.querySelectorAll(triggerSelector),
+      modal = overlay.querySelector(modalSelector),
+      close = overlay.querySelectorAll(closeSelector),
+      windows = document.querySelectorAll('[data-modal]');
+    const closeModal = () => {
+      windows.forEach(item => {
+        item.style.display = "none";
+      });
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+      overlay.style.display = "none";
+    };
+    trigger.forEach(item => {
+      item.addEventListener('click', e => {
+        if (e.target) {
+          e.preventDefault();
+        }
+        document.body.style.overflow = "hidden";
+        overlay.style.display = "block";
+        windows.forEach(item => {
+          item.style.display = "none";
+        });
+        modal.style.display = "block";
+      });
+    });
+    close.forEach(item => {
+      item.addEventListener('click', () => {
+        closeModal();
+      });
+    });
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) {
+        closeModal();
+      }
+    });
+    modal.addEventListener('click', e => {
+      if (e.target.tagName === "A" || e.target.parentNode.tagName === "A") {
+        closeModal();
+      }
+    });
+  }
+  bindModal('.hamburger', '.modal_menu', '.modal__close');
+  bindModal('.button_contact', '.modal_contact', '.modal__close');
+  bindModal('.button_book', '.modal_book', '.modal__close');
+}
+/* harmony default export */ __webpack_exports__["default"] = (modals);
 
 /***/ })
 

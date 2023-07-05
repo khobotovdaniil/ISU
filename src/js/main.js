@@ -3,6 +3,7 @@ import WOW from 'wow.js';
 
 import groupClasses from './modules/groupClasses';
 import highlightMenuObjects from './modules/highlightMenuObjects';
+import modals from './modules/modals';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -97,9 +98,11 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	wow.init();
 
+	modals();
+
 	//Group classes slider
 	groupClasses();
 	
-	highlightMenuObjects('.menu_item__link', 'menu_item__link-active');
+	highlightMenuObjects('.menu__item__link', 'menu__item__link-active');
 
 });

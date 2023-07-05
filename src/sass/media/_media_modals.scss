@@ -1,0 +1,41 @@
+@media (max-width:767px) {
+    .modal {
+        &-wide {
+            width: 550px;
+        }
+        &__close {
+            &:hover {
+                filter: none; 
+            }
+        }
+        &__item {
+            &__link {
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+        &__buttons {
+            &__item {
+                img {
+                    &:hover {
+                        filter: drop-shadow(var(--shadow));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .modal {
+        width: 290px;
+        &__top {
+            display: block;
+        }
+        &__logo {
+            height: 30px;
+        }
+
+    }
+}
