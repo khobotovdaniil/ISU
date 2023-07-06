@@ -16,6 +16,12 @@
             outline: none;
             border-color: var(--main-2);
         }
+        &-white {
+            color: var(--white);
+            &::placeholder {
+                color: var(--pink);
+            }
+        }
     }
     &__textarea {
         grid-column: 1 / 3;
@@ -30,6 +36,12 @@
         &:focus {
             outline: none;
             border-color: var(--main-2);
+        }
+        &-white {
+            color: var(--white);
+            &::placeholder {
+                color: var(--pink);
+            }
         }
     }
     &__triggers {
