@@ -54,6 +54,15 @@
             flex-direction: column;
             justify-content: center;
         }
+        &__header {
+            font-family: 'Sansita', sans-serif;
+            font-weight: 700;
+            text-shadow: var(--shadow);
+            z-index: 1;
+            font-size: 35px;
+            transition: 0.6s all;
+            color: var(--white);
+        }
         &__bottom {
             background-color: var(--main-2);
             height: 15%;

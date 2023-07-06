@@ -27,6 +27,9 @@
     &__button {
         display: flex;
         justify-content: flex-end;
+        a {
+            line-height: 100%;
+        }
     }
     &__img {
         position: absolute;

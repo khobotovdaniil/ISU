@@ -65,6 +65,13 @@
             box-shadow: none;
         }
     }
+    &-link {
+        text-align: center;
+        padding-top: 5px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 @media (max-width:991px) {
@@ -114,6 +121,9 @@
                 color: var(--pink);
             }
         }
+        &-link {
+            padding-top: 3px;
+        }
     }
 }
 
@@ -138,6 +148,9 @@
         &-purchase {
             width: 100%;
             height: 100%;
+        }
+        &-link {
+            padding-top: 2px;
         }
     }
 }

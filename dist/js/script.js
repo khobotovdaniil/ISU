@@ -4617,7 +4617,7 @@ window.addEventListener('DOMContentLoaded', () => {
     boxClass: 'wow',
     animateClass: 'animated',
     offset: 100,
-    mobile: false,
+    mobile: true,
     live: true
   });
   wow.init();
