@@ -2,6 +2,9 @@ function groupClasses() {
 	const buttons = document.querySelectorAll('.group__button');
 	const classes = document.querySelectorAll('.group__class');
 
+	buttons[0].classList.add('button-active');
+	classes[0].classList.add('group__class-active');
+
 	document.querySelector('.group__buttons').addEventListener('click', (e) => {
 		const target = e.target;
 		buttons.forEach((item, i) => {
