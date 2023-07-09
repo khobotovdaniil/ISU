@@ -15,6 +15,9 @@
     transition: 0.6s all;
     margin-top: 5px;
     text-transform: capitalize;
+    &:disabled {
+        opacity: 0.2;
+    }
     &:hover {
         text-shadow: 1px 1px 4px var(--main-1);
         box-shadow: 1px 1px 4px var(--main-1);

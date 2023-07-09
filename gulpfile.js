@@ -1,6 +1,7 @@
 "use strict";
 
 const gulp        = require('gulp');
+const replace = require('gulp-replace');
 const webpack = require("webpack-stream");
 const browserSync = require('browser-sync');
 const sass        = require('gulp-sass')(require('sass'));
@@ -11,6 +12,8 @@ const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
 const dist = "./dist/";
+// const prod = "./prod/"
+const prod = "/openserver/domains/wordpress/wp-content/themes/ISU"
 // const dist = "/openserver/domains/dist";
 
 gulp.task('styles', function() {
@@ -62,7 +65,7 @@ gulp.task('scripts', () => {
             .on("end", browserSync.reload);
 });
 
-gulp.task("prod", () => {
+gulp.task("prod-js", () => {
     return gulp.src("./src/js/main.js")
                 .pipe(webpack({
                     mode: 'production',
@@ -87,7 +90,18 @@ gulp.task("prod", () => {
                         ]
                       }
                 }))
-                .pipe(gulp.dest(dist + "/js"))
+                .pipe(gulp.dest(prod + "/assets/js"))
+});
+
+gulp.task("prod-css", () => {
+    return gulp.src("src/sass/**/*.+(scss|sass)")
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(rename({suffix: '', prefix: ''}))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(replace('../', 'assets/'))
+    .pipe(gulp.dest(prod +"/"))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('fonts', function () {
@@ -126,5 +140,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task("build", gulp.parallel('styles', 'html', 'scripts', 'fonts', 'icons', 'images'));
+
+gulp.task("prod", gulp.parallel('prod-js', 'prod-css'));
 
 gulp.task('default', gulp.parallel('watch', 'build'));

@@ -4,6 +4,8 @@ import WOW from 'wow.js';
 import groupClasses from './modules/groupClasses';
 import highlightMenuObjects from './modules/highlightMenuObjects';
 import modals from './modules/modals';
+import maskForForms from './modules/maskForForms';
+import checkboxValidation from './modules/checkboxValidation';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -104,5 +106,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	groupClasses();
 	
 	highlightMenuObjects('.menu__item__link', 'menu__item__link-active');
+
+	checkboxValidation();
+
+	maskForForms();
 
 });
