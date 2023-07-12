@@ -7,13 +7,12 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     font-size: 50px;
-    color: var(--white);
 }
 
 h2 {
     position: relative;
-    color: var(--pink);
     font-size: 40px;
+    margin-left: 30px;
     &:before {
         content: '';
         display: block;
@@ -23,7 +22,12 @@ h2 {
         left: -28px;
         top: 2px;
         z-index: -1;
-        background: url('../icons/boot-grad.svg')  center (center/cover) no-repeat;
+    }
+    &.pink {
+        color: var(--pink);
+        &:before {
+            background: url('../icons/boot-grad.svg')  center (center/cover) no-repeat;
+        }
     }
     &.blue {
         color: var(--main-4);
@@ -34,14 +38,12 @@ h2 {
 }
 
 h3 {
-    color: var(--main-3);
     font-size: 35px;
     transition: 0.6s all;
 }
 
 h4 {
     font-size: 26px;
-    color: var(--main-2);
     font-style: italic;
 }
 

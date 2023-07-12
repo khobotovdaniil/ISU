@@ -1,4 +1,3 @@
-import Glide from '@glidejs/glide';
 import WOW from 'wow.js';
 
 import groupClasses from './modules/groupClasses';
@@ -6,6 +5,7 @@ import highlightMenuObjects from './modules/highlightMenuObjects';
 import modals from './modules/modals';
 import maskForForms from './modules/maskForForms';
 import checkboxValidation from './modules/checkboxValidation';
+import glideSliders from './modules/glideSliders';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,73 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	};
 
-	//Glide sliders
-	const mainSlider = new Glide('.slider', {
-		type: 'carousel',		
-		startAt: 0,
-		perView: 1,
-		gap: 0,
-		autoplay: 5000,
-		hoverpause: false,
-		focusAt: 'center',
-		animationTimingFunc: 'ease-in-out',
-		animationDuration: 1000,
-	});
-	mainSlider.mount();
-
-	const pricesSlider = new Glide('.prices', {
-		type: 'carousel',		
-		startAt: 0,
-		perView: 3,
-		gap: -30,
-		breakpoints: {
-			767: {
-				perView: 2,
-				gap: -70,
-			},
-			575: {
-				perView: 1,
-				gap: -250,
-			},
-			512: {
-				perView: 1,
-				gap: -180,
-			},
-			440: {
-				perView: 1,
-				gap: -100,
-			},
-			360: {
-				perView: 1,
-				gap: -70,
-			},
-			320: {
-				perView: 1,
-				gap: -50,
-			}
-		},
-		autoplay: 5000,
-		hoverpause: true,
-		focusAt: 'center',
-		animationTimingFunc: 'ease-in-out',
-		animationDuration: 500,
-	});
-	pricesSlider.mount();
-
-	const reviewsSlider = new Glide('.reviews', {
-		type: 'carousel',		
-		startAt: 0,
-		perView: 1,
-		gap: 0,
-		autoplay: 5000,
-		hoverpause: false,
-		focusAt: 'center',
-		animationTimingFunc: 'ease-in-out',
-		animationDuration: 1000,
-	});
-	reviewsSlider.mount();
-
-
 	//WoW.js
 	const wow = new WOW({
 		boxClass: 'wow',
@@ -102,13 +35,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	modals();
 
-	//Group classes slider
-	groupClasses();
-	
-	highlightMenuObjects('.menu__item__link', 'menu__item__link-active');
+	maskForForms();
 
 	checkboxValidation();
 
-	maskForForms();
+	try {
+		glideSliders();
+	} catch(e) {}
+
+	
+
+	try {
+		groupClasses();
+	} catch(e) {}
+	
+	highlightMenuObjects('.menu__item__link', 'menu__item__link-active');
 
 });

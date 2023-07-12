@@ -21,7 +21,6 @@ function checkboxValidation () {
             changeStatus();
         })
     });
-
 }
 
 export default checkboxValidation;

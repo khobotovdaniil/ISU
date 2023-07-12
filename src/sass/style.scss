@@ -14,7 +14,6 @@
 @import 'base/glide';
 @import 'base/forms';
 
-
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -56,6 +55,7 @@ ul {
     }
 }
 
+@import 'blocks/pageParts';
 @import 'blocks/header';
 @import 'media/media_header';
 @import 'blocks/slider';
@@ -80,5 +80,6 @@ ul {
 @import 'media/media_footer';
 @import 'blocks/modals';
 @import 'media/media_modals';
+
 
 @import 'base/animations';

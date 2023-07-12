@@ -14,6 +14,10 @@
         -moz-text-fill-color: transparent;
     }
     
+    &.center {
+        text-align: center;
+    }
+    
     &.bold {
         font-size: 18px;
         font-weight: 700;
@@ -30,9 +34,17 @@
     &.small {
         font-size: 14px;
     }
+
+    &.blue {
+        color: var(--main-4);   
+    }
     
     &.pink {
-        color: var(--main-2);
+        color: var(--main-2);   
+    }
+
+    &.purple {
+        color: var(--main-3);   
     }
 
     &.red {

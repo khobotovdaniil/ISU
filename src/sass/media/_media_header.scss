@@ -11,13 +11,12 @@
             }
         }
         &__logoblock {
-            padding-top: 60px;
+            height: 80px;
             &-normal {
                 width: 210px;
             }
-            top: -90px;
             &__logo {
-                margin: 40px auto;
+                margin: 5px auto;
                 height: 60px;
             }
         }
@@ -27,7 +26,6 @@
         display: block;
     }
 }
-
 
 @media (max-width:767px) {
     .header {
@@ -50,16 +48,13 @@
         }
 
         &__logoblock {
-            padding-top: 70px;
             &-normal {
-                height: 145px;
+                height: 60px;
             }
             &-wide {
-                height: 145px  ;
+                height: 60px;
             }
-            top: -80px;
             &__logo {
-                margin: 15px auto;
                 height: 50px;
             }
         }
@@ -76,13 +71,12 @@
     }
 }
 
-
 @media (max-width:575px) {
     .header {
         height: 60px;
-        padding-top: 5px;
         display: block;
         &__logo {
+            margin-top: 5px;
             display: block;
             width: 93px;
             height: 38px;
@@ -101,19 +95,16 @@
             }
         }
         &__logoblock {
-            padding-top: 60px;
             &-normal {
                 width: 100vw;
                 animation: none;
                 border-radius: 0px;
-                height: 60px;
-                top: -10px;
+                height: 50px;
                 padding-top: 0;
             }
             &-wide {
                 animation: none;
                 height: 50px;   
-                top: -10px;
             }
             &__logo {
                 display: none;
