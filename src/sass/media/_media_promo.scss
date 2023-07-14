@@ -10,9 +10,6 @@
         padding-top: 30px;
         min-height: 240px;
         background: url('../img/bg/promo_mobile.png')  center (center/cover) no-repeat;
-        &__wrapper {
-            height: 200px;
-        }
         &__text {
             grid-column: 1 / 3;
         }

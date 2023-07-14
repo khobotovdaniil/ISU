@@ -5,10 +5,12 @@
     overflow: hidden;
     &__wrapper {
         display: grid;
-        grid-template-columns: 4fr 7fr; 
+        grid-template-columns: 5fr 7fr; 
     }
     &__photo {
         grid-row: 1 / 5;
+        display: flex;
+        align-items: flex-end;
         img {
             width: 100%;
             object-fit: cover;

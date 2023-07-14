@@ -14,10 +14,11 @@
 @import 'base/glide';
 @import 'base/forms';
 
-.container {
+.container-main {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
+    padding: 0 10px;
 }
 
 .divider {

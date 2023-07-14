@@ -1,15 +1,29 @@
 @media (max-width:991px) {
     .footer {
-        height: 80px;
+        height: 100px;
         &__logo {
             height: 60px;
         }
     }
 }
 
+@media (max-width:767px) {
+    .footer {
+        &__item {
+            &__link {
+                font-size: 14px;
+                &:hover {
+                    filter: none; 
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:575px) {
     .footer {
-        height: 60px;
+        height: 80px;
         &__logo {
             height: 40px;
         }

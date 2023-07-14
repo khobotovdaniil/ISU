@@ -15,3 +15,50 @@
 .breadcrumbs {
     color: var(--main-2);
 }
+
+.sidebar {
+    height: 500px;
+    .widget {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        margin-bottom: 30px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.posts {
+    padding-top: 20px;
+    &__img {
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__date {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:991px) { 
+    .page {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width:767px) { 
+    .page {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width:575px) { 
+    .page {
+        padding-top: 30px;
+    }
+}

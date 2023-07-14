@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const logoBlock = document.getElementById('logoblock');
 
 	window.onscroll = function () {
-		if (window.pageYOffset>150) {
+		if (window.pageYOffset>80) {
             logoBlock.classList.add('header__logoblock-wide');
             logoBlock.classList.remove('header__logoblock-normal');
         } else {

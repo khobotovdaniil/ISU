@@ -58,6 +58,21 @@ a {
     font-style: italic;
 }
 
+.decorated {
+    list-style: none;
+    li {
+        position: relative;
+        &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            top: 4px;
+            left: -18px;
+            position: absolute;
+            background: url('../icons/list_item.svg')  center (center/cover) no-repeat;
+        }
+    }
+}
 
 
 @media (max-width:767px) {
@@ -83,5 +98,12 @@ a {
     }
     .small {
         font-size: 12px;
+    }
+    .decorated {
+        li {
+            &:before {
+                top: 3px;
+            }
+        }
     }
 }
