@@ -1,5 +1,5 @@
 function modals () {
-    function bindModal (triggerSelector, modalSelector, closeSelector) {
+    function bindModal (triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector) {
         const overlay = document.querySelector('.overlay'),
               trigger = document.querySelectorAll(triggerSelector),
               modal = overlay.querySelector(modalSelector),
@@ -16,7 +16,13 @@ function modals () {
             overlay.style.display = "none";
         }
 
-        trigger.forEach(item => {
+        const getPackageName = (item) => {
+            const packageName = item.closest(packagesSelector).querySelector(namesSelector);
+            // console.log(packageName.innerHTML);
+            modal.querySelector('select[name="package"]').value = packageName.innerHTML;
+        };
+
+        trigger.forEach((item) => {
             item.addEventListener('click', (e) => {
                 if (e.target) {
                     e.preventDefault();
@@ -29,6 +35,8 @@ function modals () {
                 });
     
                 modal.style.display = "block";
+
+                namesSelector && packagesSelector ? getPackageName(item) : null;
             });
         });
 
@@ -53,7 +61,8 @@ function modals () {
 
     bindModal('.hamburger', '.modal_menu', '.modal__close');
     bindModal('.button_contact', '.modal_contact', '.modal__close');
-    bindModal('.button_book', '.modal_book', '.modal__close');
+    bindModal('.button_book', '.modal_book', '.modal__close', '.prices__slide', '.prices__slide__header');
+    bindModal('.button_book', '.modal_book', '.modal__close', '.group__class', '.group__class__header');
 }
 
 export default modals;

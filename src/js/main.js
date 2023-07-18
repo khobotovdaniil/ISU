@@ -7,7 +7,6 @@ import maskForForms from './modules/maskForForms';
 import checkboxValidation from './modules/checkboxValidation';
 import glideSliders from './modules/glideSliders';
 
-
 window.addEventListener('DOMContentLoaded', () => {
 
 	//Menu: static/dynamic 
@@ -42,8 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	try {
 		glideSliders();
 	} catch(e) {}
-
-	
 
 	try {
 		groupClasses();
