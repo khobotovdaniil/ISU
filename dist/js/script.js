@@ -8862,6 +8862,7 @@ function modals() {
   bindModal('.hamburger', '.modal_menu', '.modal__close');
   bindModal('.button_contact', '.modal_contact', '.modal__close');
   bindModal('.button_book', '.modal_book', '.modal__close', '.prices__slide', '.prices__slide__header');
+  bindModal('.button_book', '.modal_book', '.modal__close', '.group__class', '.group__class__header');
 }
 /* harmony default export */ __webpack_exports__["default"] = (modals);
 
