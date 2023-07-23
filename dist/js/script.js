@@ -8540,6 +8540,12 @@ window.addEventListener('DOMContentLoaded', () => {
     Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_1__["default"])();
   } catch (e) {}
   Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_2__["default"])('.menu__item__link', 'menu__item__link-active');
+  const hideRecaptcha = () => {
+    document.querySelector('.grecaptcha-badge').parentNode.classList.add('hidden');
+  };
+  setTimeout(() => {
+    hideRecaptcha();
+  }, 5000);
 });
 
 /***/ }),
@@ -8772,7 +8778,7 @@ function maskForForms() {
         ZZ: {
           mask: imask__WEBPACK_IMPORTED_MODULE_0__["default"].MaskedRange,
           from: 0,
-          to: 12
+          to: 99
         },
         HH: {
           mask: imask__WEBPACK_IMPORTED_MODULE_0__["default"].MaskedRange,
@@ -8810,7 +8816,7 @@ function maskForForms() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function modals() {
-  function bindModal(triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector) {
+  function bindModal(triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector, data) {
     const overlay = document.querySelector('.overlay'),
       trigger = document.querySelectorAll(triggerSelector),
       modal = overlay.querySelector(modalSelector),
@@ -8826,7 +8832,6 @@ function modals() {
     };
     const getPackageName = item => {
       const packageName = item.closest(packagesSelector).querySelector(namesSelector);
-      // console.log(packageName.innerHTML);
       modal.querySelector('select[name="package"]').value = packageName.innerHTML;
     };
     trigger.forEach(item => {
@@ -8841,6 +8846,7 @@ function modals() {
         });
         modal.style.display = "block";
         namesSelector && packagesSelector ? getPackageName(item) : null;
+        data ? modal.querySelector('select[name="package"]').value = item.getAttribute('data-package') : null;
       });
     });
     close.forEach(item => {
@@ -8863,6 +8869,7 @@ function modals() {
   bindModal('.button_contact', '.modal_contact', '.modal__close');
   bindModal('.button_book', '.modal_book', '.modal__close', '.prices__slide', '.prices__slide__header');
   bindModal('.button_book', '.modal_book', '.modal__close', '.group__class', '.group__class__header');
+  bindModal('.button_promo', '.modal_book', '.modal__close', '', '', true);
 }
 /* harmony default export */ __webpack_exports__["default"] = (modals);
 

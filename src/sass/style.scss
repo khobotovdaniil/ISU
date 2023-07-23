@@ -29,6 +29,10 @@
     background-image: var(--light-gradient);
 }
 
+.hidden {
+    display: none;
+}
+
 ul {
     &.cube {
         list-style-type: none;

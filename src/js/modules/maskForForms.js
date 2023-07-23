@@ -29,7 +29,7 @@ function maskForForms () {
                 ZZ: {
                     mask: IMask.MaskedRange,
                     from: 0,
-                    to: 12
+                    to: 99
                 },
                 HH: {
                     mask: IMask.MaskedRange,

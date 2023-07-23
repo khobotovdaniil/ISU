@@ -6,6 +6,7 @@
     top: 0;
     background-color: rgba(0,0,0, 0.7);
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .modal {
@@ -19,7 +20,7 @@
     border-radius: 50px;
     background-image: var(--dark-gradient);
     padding: 20px;
-    padding-bottom: 30px;
+    overflow-y: auto;
     &-wide {
         width: 600px;
     }

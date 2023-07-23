@@ -3,6 +3,9 @@
     min-height: 70vh;
     padding-top: 140px;
     padding-bottom: 30px;   
+    img {
+        border-radius: 12px;
+    }
 }
 
 .content-wrapper {
@@ -40,9 +43,11 @@
         border-radius: 12px;
         overflow: hidden;
         box-shadow: var(--shadow);
+        aspect-ratio: 16 / 9;
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
         }
     }
     &__date {

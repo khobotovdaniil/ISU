@@ -3,6 +3,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     text-shadow: var(--shadow);
     z-index: 1;
+    color: var(--main-3);
 }
 
 h1 {
@@ -35,6 +36,10 @@ h2 {
             background: url('../icons/boot-pink.svg')  center (center/cover) no-repeat;
         }
     }
+}
+
+.container-main h2 {
+    margin-left: 0;
 }
 
 h3 {

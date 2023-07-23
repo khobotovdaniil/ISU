@@ -1,5 +1,5 @@
 function modals () {
-    function bindModal (triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector) {
+    function bindModal (triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector, data) {
         const overlay = document.querySelector('.overlay'),
               trigger = document.querySelectorAll(triggerSelector),
               modal = overlay.querySelector(modalSelector),
@@ -18,7 +18,6 @@ function modals () {
 
         const getPackageName = (item) => {
             const packageName = item.closest(packagesSelector).querySelector(namesSelector);
-            // console.log(packageName.innerHTML);
             modal.querySelector('select[name="package"]').value = packageName.innerHTML;
         };
 
@@ -37,6 +36,7 @@ function modals () {
                 modal.style.display = "block";
 
                 namesSelector && packagesSelector ? getPackageName(item) : null;
+                data ? modal.querySelector('select[name="package"]').value = item.getAttribute('data-package') : null;
             });
         });
 
@@ -63,6 +63,7 @@ function modals () {
     bindModal('.button_contact', '.modal_contact', '.modal__close');
     bindModal('.button_book', '.modal_book', '.modal__close', '.prices__slide', '.prices__slide__header');
     bindModal('.button_book', '.modal_book', '.modal__close', '.group__class', '.group__class__header');
+    bindModal('.button_promo', '.modal_book', '.modal__close', '', '', true);
 }
 
 export default modals;
