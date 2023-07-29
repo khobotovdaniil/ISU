@@ -1,6 +1,6 @@
 @media (max-width:767px) {
     .promo {
-        background: url('../img/bg/promo_tablet.png')  center (center/cover) no-repeat;
+        background: url('../img/bg/promo_tablet.jpg')  center (center/cover) no-repeat;
     }
 }
 
@@ -9,7 +9,6 @@
     .promo {
         padding-top: 30px;
         min-height: 240px;
-        background: url('../img/bg/promo_mobile.png')  center (center/cover) no-repeat;
         &__text {
             grid-column: 1 / 3;
         }

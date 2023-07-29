@@ -9,7 +9,7 @@
             grid-template-columns: 1fr 2fr; 
         }
         &__button {
-            justify-content: start;
+            text-align: left;
         }
         &__img {    
             top: 45%;
@@ -22,6 +22,9 @@
         min-height: 300px;
         &__img {
             top: 54%;
+            img {
+                opacity: 0.5;
+            }
         }
     }
 }
@@ -40,9 +43,6 @@
         &__list {
             grid-row: 1 / 2;
         }
-        &__button {
-            justify-content: start;
-        }
         &__img {
             position: absolute; 
             left: 60px;
@@ -50,7 +50,7 @@
             overflow: hidden;
             img {
                 width: 100%;
-                opacity: 0.6;
+                opacity: 0.4;
             }
         }
     }

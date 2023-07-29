@@ -70,7 +70,7 @@
     }
     &-link {
         text-align: center;
-        padding-top: 5px;
+        padding: 0 40px 8px 40px;
         font-style: normal;
         &:hover {
             text-decoration: none;
@@ -126,7 +126,7 @@
             }
         }
         &-link {
-            padding-top: 3px;
+            padding-top: 2px;
         }
     }
 }
@@ -154,7 +154,7 @@
             height: 100%;
         }
         &-link {
-            padding-top: 2px;
+            padding: 2px 30px 8px 30px;
         }
     }
 }

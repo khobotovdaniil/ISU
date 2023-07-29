@@ -8540,12 +8540,6 @@ window.addEventListener('DOMContentLoaded', () => {
     Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_1__["default"])();
   } catch (e) {}
   Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_2__["default"])('.menu__item__link', 'menu__item__link-active');
-  const hideRecaptcha = () => {
-    document.querySelector('.grecaptcha-badge').parentNode.classList.add('hidden');
-  };
-  setTimeout(() => {
-    hideRecaptcha();
-  }, 5000);
 });
 
 /***/ }),

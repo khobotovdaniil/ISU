@@ -25,8 +25,7 @@
         justify-content: space-between;
     }
     &__button {
-        display: flex;
-        justify-content: flex-end;
+        text-align: right;
         a {
             line-height: 100%;
         }
