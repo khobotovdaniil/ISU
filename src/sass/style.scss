@@ -1,3 +1,7 @@
+/*
+Theme Name: ISU
+*/
+
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 @import 'libs/bootstrap-reboot.min';
@@ -42,12 +46,13 @@ ul {
             margin-bottom: 10px;
             &:before {
                 content: '';
-                background-image: url(../icons/list_item.svg);
-                width: 40px;
-                height: 40px;
+                background: url('../icons/list_item.svg')  center (center/cover) no-repeat;
+                width: 15px;
+                height: 15px;
                 position: absolute;
-                left: -40px;
-                top: -4px;
+                top: 4px;
+                left: -28px;
+                filter: drop-shadow(var(--shadow));
             }
         }
     }
@@ -57,6 +62,18 @@ ul {
     .divider {
         width: 150px;
         height: 2px;
+    }
+    ul {
+        &.cube {
+            li {
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    top: 3px;
+                    left: -22px;
+                }
+            }
+        }
     }
 }
 

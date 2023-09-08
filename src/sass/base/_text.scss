@@ -67,9 +67,10 @@ a {
             width: 15px;
             height: 15px;
             top: 4px;
-            left: -18px;
+            left: -28px;
             position: absolute;
             background: url('../icons/list_item.svg')  center (center/cover) no-repeat;
+            filter: drop-shadow(var(--shadow));
         }
     }
 }
@@ -87,6 +88,16 @@ a {
             text-decoration: none;
         }
     }
+    .decorated, .page-list, .children {
+        li {
+            &:before {
+                top: 3px;
+                width: 12px;
+                height: 12px;
+                left: -22px;
+            }
+        }
+    }
 }
 
 @media (max-width:575px) {
@@ -98,12 +109,5 @@ a {
     }
     .small {
         font-size: 12px;
-    }
-    .decorated {
-        li {
-            &:before {
-                top: 3px;
-            }
-        }
     }
 }
