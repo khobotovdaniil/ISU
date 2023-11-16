@@ -19,6 +19,9 @@
                 color: var(--pink);
             }
         }
+        &-short {
+            width: 190px;
+        }
     }
     &__textarea {
         width: 100%;
@@ -83,6 +86,21 @@ input[type='checkbox'] {
     }
 }
 
+@media (max-width:1199px) { 
+    .form {
+        &__input { 
+            &-short {
+                width: 100%;
+            }
+        }
+        &__triggers {
+            &-short {
+                display: block;
+            }
+        }
+    }
+}
+
 @media (max-width:991px) {  
     .form {
         &__input { 
@@ -105,6 +123,12 @@ input[type='checkbox'] {
         &__textarea {
             height: 100px;
             font-size: 12px;
+        }
+        &__triggers {
+            &-short {
+                grid-column: 1 / 3;
+                display: flex;
+            }
         }
     }
 }

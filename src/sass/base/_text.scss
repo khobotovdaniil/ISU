@@ -50,6 +50,9 @@
     &.red {
         color: var(--main-1);
     }
+    &.hidden {
+        display: none;
+    }
 }
 
 a {

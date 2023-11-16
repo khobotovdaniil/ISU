@@ -1,10 +1,10 @@
-function modals () {
-    function bindModal (triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector, data) {
+function modals() {
+    function bindModal(triggerSelector, modalSelector, closeSelector, packagesSelector, namesSelector, data) {
         const overlay = document.querySelector('.overlay'),
-              trigger = document.querySelectorAll(triggerSelector),
-              modal = overlay.querySelector(modalSelector),
-              close = overlay.querySelectorAll(closeSelector),
-              windows = document.querySelectorAll('[data-modal]');
+            trigger = document.querySelectorAll(triggerSelector),
+            modal = overlay.querySelector(modalSelector),
+            close = overlay.querySelectorAll(closeSelector),
+            windows = document.querySelectorAll('[data-modal]');
 
         const closeModal = () => {
             windows.forEach(item => {
@@ -17,8 +17,8 @@ function modals () {
         }
 
         const getPackageName = (item) => {
-            const packageName = item.closest(packagesSelector).querySelector(namesSelector);
-            modal.querySelector('select[name="package"]').value = packageName.innerHTML;
+            const data = item.getAttribute('data-name') ? item.getAttribute('data-name') : '--Select Package--';
+            modal.querySelector('select[name="package"]').value = data;
         };
 
         trigger.forEach((item) => {
@@ -32,7 +32,7 @@ function modals () {
                 windows.forEach(item => {
                     item.style.display = "none";
                 });
-    
+
                 modal.style.display = "block";
 
                 namesSelector && packagesSelector ? getPackageName(item) : null;
@@ -45,8 +45,8 @@ function modals () {
                 closeModal();
             });
         })
-        
-        overlay.addEventListener('click', e => {    
+
+        overlay.addEventListener('click', e => {
             if (e.target === overlay) {
                 closeModal();
             }

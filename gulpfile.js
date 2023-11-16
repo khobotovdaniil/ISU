@@ -99,8 +99,9 @@ gulp.task("prod-css", () => {
     .pipe(rename({suffix: '', prefix: ''}))
     .pipe(autoprefixer())
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(replace('../', 'assets/'))
-    .pipe(gulp.dest(prod +"/"))
+    // .pipe(replace('../', 'assets/'))
+    .pipe(gulp.dest(prod +"/assets/styles/"))
+    // .pipe(gulp.dest(prod +"/"))
     .pipe(browserSync.stream());
 });
 

@@ -8825,8 +8825,8 @@ function modals() {
       overlay.style.display = "none";
     };
     const getPackageName = item => {
-      const packageName = item.closest(packagesSelector).querySelector(namesSelector);
-      modal.querySelector('select[name="package"]').value = packageName.innerHTML;
+      const data = item.getAttribute('data-name') ? item.getAttribute('data-name') : '--Select Package--';
+      modal.querySelector('select[name="package"]').value = data;
     };
     trigger.forEach(item => {
       item.addEventListener('click', e => {
