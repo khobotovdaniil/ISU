@@ -6,6 +6,7 @@ import modals from './modules/modals';
 import maskForForms from './modules/maskForForms';
 import checkboxValidation from './modules/checkboxValidation';
 import glideSliders from './modules/glideSliders';
+import advents from './modules/advents'
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -44,6 +45,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	try {
 		groupClasses();
+	} catch(e) {}
+
+	try {
+		advents();
 	} catch(e) {}
 	
 	highlightMenuObjects('.menu__item__link', 'menu__item__link-active');

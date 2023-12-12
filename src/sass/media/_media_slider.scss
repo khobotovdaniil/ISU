@@ -15,23 +15,36 @@
         &__content {
             padding: 0 45px;
         }
+        &__subheader {
+            margin-left: 0;
+        }
+        &__button {
+           margin-left: 0;
+        }
     }
 }
 
 @media (max-width:575px) { 
     .slider {
-        height: 560px;
+        height: 290px;
         &__content {
             padding: 0 20px;
         }
+        &__header {
+            font-size: 26px;
+        }
         &__subheader {
+            font-size: 26px;
             margin-left: 30px;
             text-align: right;
+        }
+        &__button {
+            text-align: center;
         }
         .glide {
             &__slide {
                 img {
-                    height: 560px;
+                    height: 290px;
                 }
             }
         }

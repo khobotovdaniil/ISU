@@ -77,7 +77,10 @@ ul {
     }
 }
 
-@import 'blocks/pageParts';
+@import 'pages/pageParts';
+@import 'pages/packages';
+@import 'promo/advents';
+
 @import 'blocks/header';
 @import 'media/media_header';
 @import 'blocks/slider';

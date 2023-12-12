@@ -30,6 +30,10 @@
     &.italic {
         font-style: italic;
     }
+
+    &.crossed {
+        text-decoration: line-through;
+    }
     
     &.small {
         font-size: 14px;

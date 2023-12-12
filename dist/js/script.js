@@ -8501,6 +8501,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_maskForForms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/maskForForms */ "./src/js/modules/maskForForms.js");
 /* harmony import */ var _modules_checkboxValidation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/checkboxValidation */ "./src/js/modules/checkboxValidation.js");
 /* harmony import */ var _modules_glideSliders__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/glideSliders */ "./src/js/modules/glideSliders.js");
+/* harmony import */ var _modules_advents__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/advents */ "./src/js/modules/advents.js");
+
 
 
 
@@ -8539,8 +8541,46 @@ window.addEventListener('DOMContentLoaded', () => {
   try {
     Object(_modules_groupClasses__WEBPACK_IMPORTED_MODULE_1__["default"])();
   } catch (e) {}
+  try {
+    Object(_modules_advents__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  } catch (e) {}
   Object(_modules_highlightMenuObjects__WEBPACK_IMPORTED_MODULE_2__["default"])('.menu__item__link', 'menu__item__link-active');
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/advents.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/advents.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return advents; });
+function advents() {
+  const images = document.querySelectorAll('.advents__item__img');
+  const today = new Date().getDate();
+  images.forEach(element => {
+    const images = element.querySelectorAll('img');
+    element.addEventListener('click', () => {
+      if (+today >= +element.getAttribute('data-day')) {
+        images[0].classList.add('animate__animated', 'animate__bounceOut');
+        setTimeout(() => {
+          images[0].classList.add('hidden');
+          images[1].classList.add('animate__animated', 'animate__bounceIn');
+          images[1].classList.remove('hidden');
+        }, 1000);
+      } else {
+        images[0].classList.add('animate__animated', 'animate__bounce');
+        setTimeout(() => {
+          images[0].classList.remove('animate__bounce');
+        }, 1000);
+      }
+    });
+  });
+}
 
 /***/ }),
 

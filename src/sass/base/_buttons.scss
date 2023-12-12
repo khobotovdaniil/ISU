@@ -113,6 +113,9 @@
             font-size: 24px;
             line-height: 16px;
         }
+        &-purchase {
+            width: 100%;
+        }
         &-pink, &-purple {
             &:hover {
                 text-shadow: var(--shadow);

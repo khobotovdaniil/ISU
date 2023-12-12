@@ -1,0 +1,32 @@
+.advents {
+  &__item {
+    margin-bottom: 20px;
+    &__img {
+      transition: 0.6s all;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      &__gift {
+        filter: drop-shadow(var(--shadow));
+      }
+      &:hover {
+        transform: scale(1.2);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .advents {
+    &__item {
+      &__img {
+        &:hover {
+          transform: none;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

@@ -29,13 +29,7 @@
             }
             &-active {
                 position: relative;
-                background-image: var(--light-gradient);
-                background-size: 100%;
-                background-repeat: repeat;
-                -webkit-background-clip: text, border;
-                -webkit-text-fill-color: transparent; 
-                -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
+                color: var(--main-1);
             }
         }
     }
